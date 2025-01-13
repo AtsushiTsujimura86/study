@@ -20,4 +20,5 @@
 -list-group(ulに)
 -list-group-item(liに)
 -table table-striped 交互に色を変えたtable
+-table-dark(theadに、公式ドキュメントではthead-darkって書いてあるがなぜかできない)
 -alert alert-color
