@@ -48,6 +48,61 @@ cursor: wait
 エレメント≒タグ、ノードは開始タグ、中身、終了タグなどの細かい単位　　
 ``` <p>hello world</p> ```はエレメント```<p>```, ```hello world```, ```</p>```はそれぞれノード。また、改行やインデントの半角スペースもノードである点に注意
 
+## JSX
+JavaScriptに直接HTMLを記述することができる。babelというコンパイラを用いてJSXのタグをJavaScriptのコードに変換している。
+babelは以下で読み込む
+```
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+```
+また、実際にJSXを記述するscriptタグには``` <script type="text/babel">```  
+```
+<script type="text/babel">
+...
+let elm = (
+  <div className="alert alert-primary">
+    <h2>Hello JSX</h2>
+    <p>this is new message</p>
+  </div>
+)
+</script>
+```
+renderできるエレメントは一つだけなので、必ずdivタグで囲む。divタグ内にクラスを与えたい場合は、classではなくclassNameを使う。classはJSでは予約語になってるから。  
+
+### styleをオブジェクト(JSON)として与える
+```
+const msg_sty = {]
+  fontSize:"20px",
+  color:"red",
+  border:"1px solid blue"
+}
+let elm = (
+  <div>
+    <h2 style={msg_sty}>new message</h2>
+  </div>
+)
+```
+
+### 関数
+```
+let printMsg = function(msg, size, color){
+...
+  return <p style={style}>{msg}</p>
+}
+```
+### JSX内の条件分岐
+```
+#trueなら表示、falseなら表示しない場合
+{flag &&
+  JSXを記述
+}
+
+#trueとfalseで表示内容が異なる場合、三項演算子の記述 [条件?trueの処理:falseの処理]
+{flag ?
+  trueの場合のJSXを記述
+:
+  falseの場合のJSXの記述
+}
+```
 
 
 
