@@ -22,3 +22,5 @@
 -table table-striped 交互に色を変えたtable
 -table-dark(theadに、公式ドキュメントではthead-darkって書いてあるがなぜかできない)
 -alert alert-color
+-card card-header card-body card-footer
+
