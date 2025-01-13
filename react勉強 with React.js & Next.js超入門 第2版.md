@@ -104,6 +104,39 @@ let printMsg = function(msg, size, color){
 }
 ```
 
+### mapメソッド
+配列などのコレクションオブジェクトのメソッドで、中身をひとつづつ取り出す。JSXでは一つずつ要素を取り出して、それぞれのエレメントを作るのに使う。  
+下の例では、配列の要素であるオブジェクトをひとつずつ取り出して、tableの行をそれぞれ作成している。
+```
+data = [
+            {name:"James", mail:"james@gmail.com", age:41},
+            {name:"Kobe", mail:"Kobe@gmail.com", age:45},
+            {name:"Johdan", mail:"johdan@gmail.com", age:60}
+        ]
+let elm = (
+    <div>
+        <table className="table table-striped">
+            <thead className="table-dark">
+                <tr>
+                    <th>name</th>
+                    <th>email</th>
+                    <th>age</th>
+                </tr>
+            </thead>
+            <tbody>
+            {data.map((value) => (
+                <tr>
+                    <td>{value.name}</td>
+                    <td>{value.mail}</td>
+                    <td>{value.age}</td>
+                </tr>
+            ))}
+            </tbody>
+        </table>
+    </div>
+)
+```
+
 
 
 
