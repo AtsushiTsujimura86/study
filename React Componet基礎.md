@@ -22,3 +22,6 @@ function Component(props){
 <Component alert="alert alert-primary" name="John Smith"/>
 ```
 
+## コンポーネントのクラス
+
+
