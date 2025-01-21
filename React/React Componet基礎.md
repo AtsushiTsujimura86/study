@@ -23,5 +23,18 @@ function Component(props){
 ```
 
 ## コンポーネントのクラス
+```
+imoprt React, {Component} from "react"
+class コンポーネント名 extends Component{
+  constructor(props){
+    super(props);
+    コンストラクタの処理
+  }
+  render(){
+    JSXの記述、実際に表示するもの
+  }
+}
 
+extern default コンポーネント名
+```
 
