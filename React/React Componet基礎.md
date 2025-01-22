@@ -66,3 +66,12 @@ doAction = () => {
 
 ### アロー関数とは
 アロー関数はthis(呼び出し元を指定する参照)を持たず、定義時のスコープのthisをそのまま引き継ぐ。
+
+### 配列をlistステートに
+dataの中身を変更するときは、setStateではなく必ずdataを更新してからsetStateをする。
+```
+data=[]
+this.state={
+  list: data
+}
+```
