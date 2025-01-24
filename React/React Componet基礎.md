@@ -75,3 +75,6 @@ this.state={
   list: data
 }
 ```
+
+## ContextとProvider
+
