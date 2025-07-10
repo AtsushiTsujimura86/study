@@ -88,3 +88,13 @@ npm install -g nodemon
 
 ---
 
+### ✅ 開くポート番号を変える
+これはReactのpackage.jsonの中身
+``` json
+"scripts": {
+    "start": "set PORT=3001 && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+```
+
